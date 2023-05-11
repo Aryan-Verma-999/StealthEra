@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>home</title>
+    <link rel="icon" type="image/png" href="asset/crop-logo-removebg-preview.png">
+    <link rel="stylesheet" type="text/css" href="index_css.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+        <div class="Desktop-Display">       
+            <div class="Header">
+                <h3>StealthEra</h3>
+                <a class="head-logo" href="index.html"><img src="asset/crop-logo-removebg-preview.png" alt="Logo"  height="60"></a> 
+                <div>
+                    <div>  <a class="act-btn" href="about.html">About</a>   <a class="act-btn" href="contact.html">Contact us</a><a class="blg-btn" href="#divThree">Pre-Order</a>  </div>
+                </div>
+            </div>   
+                 
+            <div class="content">
+                <div class="capsule-text">
+                    <h2>CAPSULE 1.0</h2><h2>by <span>StealthEra</span></h2>
+                    <p>Introducing the ultimate wellness and safety companion - Capsule 1.0! This cutting-edge device not only combines traditional watch style with modern smartwatch functionality, but it also serves as your personal health and wellness coach. Connect to your smartphone via Bluetooth, track your activity, monitor your sleep, set reminders for your medication, and even have an emergency button on your wrist through our easy-to-use app. Say goodbye to multiple devices and hello to a healthier, more balanced, and safer lifestyle with Capsule 1.0. Keep an eye out for its launch <br> <br><b>- it's coming soon!</b></p>
+                    <a class="pop-btn" href="#divOne">NOTIFY ME</a>
+                </div>
+                <div class="img-box">
+                    <img src="asset/capsule0.2.png" class="capsule">
+                </div>
+            </div>
+            <footer>
+                <p>New Delhi, India | Email: info@stealthera.in<br>
+                Copyright &#169 2023 Stealthera</p>
+                
+                <a href="https://www.linkedin.com/company/stealthera/"><img src="asset/linkedin.png" width="20" height="20"></a>
+                <img src="asset/twitter.png" width="20" height="20">
+                <a href="https://www.instagram.com/stealth_era/"><img src="asset/insta.png" width="20" height="20"></a>
+            </footer>
+        </div>
+    
+    
+    
+        <div class="overlay" id="divOne">
+            <div class="wrapper">
+                <h2>Enter Your Email</h2><a class="close" href="#">&times;</a>
+                <div class="content">
+                    <div class="container">
+                        <form method="post" action="" name="form1">
+                            <input name="email-notify-me" placeholder="your email.." type="text">
+                            <input type="submit" value="Submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <div class="overlay-pre" id="divThree">
+            <div class="wrapper-pre">     
+                <h2>Pre-order-now!!</h2><a class="close" href="#">&times;</a>
+                <div class="content-pre">
+                    <div class="container-pre">
+                        <div id="smart-button-container">
+                            <div style="text-align: center;">
+                              <div id="paypal-button-container"></div>
+                            </div>
+                          </div>
+                        <script src="https://www.paypal.com/sdk/js?client-id=Abx2yQ7Gy12s95Qmv0WWTf7BNLA-ucaj2fPSc-4J7e6Sn46x3lU1vFfpapHU8muhSdfzws0AEs0UiCqO&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+                        <script>
+                          function initPayPalButton() {
+                            paypal.Buttons({
+                              style: {
+                                shape: 'rect',
+                                color: 'silver',
+                                layout: 'vertical',
+                                label: 'pay',
+                                
+                              },
+                      
+                              createOrder: function(data, actions) {
+                                return actions.order.create({
+                                  purchase_units: [{"description":"Capsule","amount":{"currency_code":"USD","value":2}}]
+                                });
+                              },
+                      
+                              onApprove: function(data, actions) {
+                                return actions.order.capture().then(function(orderData) {
+                                  
+                                  // Full available details
+                                  console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+                      
+                                  // Show a success message within this page, e.g.
+                                  const element = document.getElementById('paypal-button-container');
+                                  element.innerHTML = '';
+                                  element.innerHTML = '<h3>Thank you for your payment!</h3>';
+                      
+                                  // Or go to another URL:  actions.redirect('thank_you.html');
+                                  
+                                });
+                              },
+                      
+                              onError: function(err) {
+                                console.log(err);
+                              }
+                            }).render('#paypal-button-container');
+                          }
+                          initPayPalButton();
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="Mobile-Display">
+            <div class="Mob-Header">
+                <nav role="navigation">
+                    <div id="menuToggle">
+                      <input type="checkbox" />
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    <ul id="menu">
+                      <li class="men-btn"><a href="about.html" style="color: aliceblue; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; text-decoration: none; font-weight: 700;">About</a></li>
+                      <li class="men-btn"><a href="contact.html" style="color: aliceblue; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; text-decoration: none; font-weight: 700;">Contact</a></li>
+                    </ul>
+                   </div>
+                </nav>
+                <img src="asset/crop-logo-removebg-preview.png" alt="Logo" height="60" style="margin-left: 60px;">
+                <a class="blg-btn" href="#divThree">Pre-Order</a>
+                
+            </div>   
+            <a class="mob-smp"><img src="asset/capsule0.2.png" alt="Logo" height="300"></a>
+            <div class="mob-content">
+                <div class="capsule-text">
+                    <h2>CAPSULE 1.0</h2><h2>by <span>StealthEra</span></h2>
+                    <p>Introducing the ultimate wellness and safety companion - Capsule 1.0! This cutting-edge device not only combines traditional watch style with modern smartwatch functionality, but it also serves as your personal health and wellness coach. Connect to your smartphone via Bluetooth, track your activity, monitor your sleep, set reminders for your medication, and even have an emergency button on your wrist through our easy-to-use app. Say goodbye to multiple devices and hello to a healthier, more balanced, and safer lifestyle with Capsule 1.0. Keep an eye out for its launch <br><br><b>- it's coming soon!</b></p>
+                    <a class="pop-btn" href="#divOne">NOTIFY ME</a>
+                </div>
+            </div>
+    
+            <footer>
+                <p>New Delhi, India | Email: info@stealthera.in<br>
+                Copyright &#169 2023 Stealthera</p>
+                
+                <a href="https://www.linkedin.com/company/stealthera/"><img src="asset/linkedin.png" width="20" height="20"></a>
+                <img src="asset/twitter.png" width="20" height="20">
+                <a href="https://www.instagram.com/stealth_era/"><img src="asset/insta.png" width="20" height="20"></a>
+            </footer>
+        </div>
+        
+    
+    
+        <div class="Mob-overlay" id="divOne">
+            <div class="Mob-wrapper">
+                <h2>Enter Your Email</h2><a class="close" href="#">&times;</a>
+                <div class="Mob-content">
+                    <div class="Mob-container">
+                        <form method="post" action="" name="form">
+                            <input name="email-notify-me" placeholder="your email.." type="text">
+                            <input type="submit" value="Submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbziTAb3Ip0dsRp0B8-FNHu46jWxEg-8_2qAWuW8bSFWnsaNMa1ktWMwSkNjvvdK_5jRXg/exec'
+        const form = document.forms['form']
+        const form1 = document.forms['form1']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => alert("Thank you! your details are submitted successfully, we will contact you shortly"))
+            .then(() => {  window.location.reload(); })
+            .catch(error => console.error('Error!', error.message))
+        })
+        form1.addEventListener('submit', f => {
+            f.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form1)})
+            .then(response => alert("Thank you! your details are submitted successfully, we will contact you shortly" ))
+            .then(() => {  window.location.reload(); })
+            .catch(error => console.error('Error!', error.message))
+        })
+    </script> 
+</body>
+</html>
